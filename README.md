@@ -61,7 +61,7 @@ jobs:
 
 For a contribution graph, set `style: contrib-city`, `user: ${{ github.repository_owner }}`,
 and optionally `palette: neon`; update the commit path to `assets/contrib-city.svg`.
-Use `style: all` to generate all 17 banner styles, plus the four contribution styles
+Use `style: all` to generate all 18 banner styles, plus the four contribution styles
 when `user` is supplied, and stage the generated files you want to publish.
 
 | Input | Default | Description |
@@ -192,6 +192,14 @@ as a bold title with a "青春" badge, the first line on a ribbon below. `--them
 
 <img src="assets/seishun.svg" width="100%"/>
 
+### `abyss`
+The deep sea. Bioluminescent jellyfish pulse and trail their tentacles around your name, which shimmers as if seen
+through water, while light shafts fade in from the surface, marine snow sinks, bubbles rise and an anglerfish
+swims past with its glowing lure. Subtitle lines cross-fade in turn, tags sit along the sea floor, and a depth
+gauge runs down the right edge.
+
+<img src="assets/abyss.svg" width="100%"/>
+
 ## Contribution graph styles
 
 Built from your real GitHub contribution calendar, fetched from the public page `github.com/users/<user>/contributions` (no token needed).
@@ -257,14 +265,14 @@ python3 generate.py --help
 
 | Option | Description | Default |
 |---|---|---|
-| `--style` | `banner` · `synthwave` · `matrix` · `orbit` · `splitflap` · `swarm` · `liquid` · `scope` · `blueprint` · `terminal` · `borealis` · `hologram` · `circuit` · `warp` · `equalizer` · `sakura` · `seishun` · `contrib-grid` · `contrib-city` · `contrib-galaxy` · `contrib-heartbeat` · `all` | `banner` |
+| `--style` | `banner` · `synthwave` · `matrix` · `orbit` · `splitflap` · `swarm` · `liquid` · `scope` · `blueprint` · `terminal` · `borealis` · `hologram` · `circuit` · `warp` · `equalizer` · `sakura` · `seishun` · `abyss` · `contrib-grid` · `contrib-city` · `contrib-galaxy` · `contrib-heartbeat` · `all` | `banner` |
 | `--user` | GitHub username for `contrib-*` (with `all`, also generates the contrib styles) | — |
 | `--palette` | `green` · `halloween` · `ice` · `neon` (`contrib-*`) | `green` |
 | `--contrib-html` | Use a saved contributions HTML page instead of fetching it | — |
 | `--name` | Large title | `Hi, I'm Jihoo` |
 | `--line` | Subtitle lines, repeatable (`banner`/`matrix`/`splitflap` use all of them; the others use the first) | 3 sample lines |
 | `--tag` | Tags, repeatable (`orbit` orbits them; `splitflap`/`blueprint`/`terminal`/`hologram`/`circuit`/`warp`/`equalizer` print them) | Python, Nix, Linux, … |
-| `--theme` | `aurora` · `sunset` · `ocean` (`banner`, `orbit`, `splitflap`, `liquid`, `scope` and the styles from `terminal` to `seishun`) | `aurora` |
+| `--theme` | `aurora` · `sunset` · `ocean` (`banner`, `orbit`, `splitflap`, `liquid`, `scope` and the styles from `terminal` to `abyss`) | `aurora` |
 | `--seed` | Random seed for stars / code rain | `42` |
 | `--out` | Output path (single style only) | `assets/<style>.svg` |
 

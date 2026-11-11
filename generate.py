@@ -17,6 +17,7 @@ import argparse
 import random
 from pathlib import Path
 
+import abyss
 import contrib
 import creative
 import spectacle
@@ -441,6 +442,7 @@ STYLES = {
     "orbit": build_orbit,
     **creative.STYLES,
     **spectacle.STYLES,
+    **abyss.STYLES,
 }
 
 
