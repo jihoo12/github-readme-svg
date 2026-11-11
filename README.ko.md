@@ -62,7 +62,7 @@ jobs:
 기여 그래프는 `style: contrib-city`, `user: ${{ github.repository_owner }}`를
 지정하세요. `palette: neon`처럼 색상을 선택할 수 있습니다.
 커밋 경로도 `assets/contrib-city.svg`로 변경해야 합니다.
-`style: all`은 배너 18종을 생성하며, `user`를 지정하면 기여 그래프 4종도 생성합니다.
+`style: all`은 배너 19종을 생성하며, `user`를 지정하면 기여 그래프 4종도 생성합니다.
 이때 커밋 단계에서 게시할 생성 파일들을 선택하세요.
 
 | 입력 | 기본값 | 설명 |
@@ -197,6 +197,13 @@ HUD 프레임에는 태그가 목적지로 표시됩니다.
 
 <img src="assets/abyss.svg" width="100%"/>
 
+### `motion`
+12초 주기로 반복되는 플랫 모션그래픽 타이틀 시퀀스입니다. 컬러 바가 화면을 쓸고 지나가면 이름이 마스크 밖으로 한 글자씩
+올라오고, 도형들이 그려지고 돌고 튀면서 주위에 등장합니다. 문구는 블록 와이프로 교체되고, 태그 칩이 통통 튀어나오며,
+마지막에는 아이리스 와이프로 닫히면서 처음으로 이어집니다. 이름의 마지막 단어에는 강조색이 들어갑니다.
+
+<img src="assets/motion.svg" width="100%"/>
+
 ## Contribution graph 스타일
 
 실제 GitHub contribution 기록으로 만듭니다. 데이터는 공개 페이지 `github.com/users/<user>/contributions`에서 가져오므로 토큰이 필요 없습니다.
@@ -261,14 +268,14 @@ python3 generate.py --help
 
 | 옵션 | 설명 | 기본값 |
 |---|---|---|
-| `--style` | `banner` · `synthwave` · `matrix` · `orbit` · `splitflap` · `swarm` · `liquid` · `scope` · `blueprint` · `terminal` · `borealis` · `hologram` · `circuit` · `warp` · `equalizer` · `sakura` · `seishun` · `abyss` · `contrib-grid` · `contrib-city` · `contrib-galaxy` · `contrib-heartbeat` · `all` | `banner` |
+| `--style` | `banner` · `synthwave` · `matrix` · `orbit` · `splitflap` · `swarm` · `liquid` · `scope` · `blueprint` · `terminal` · `borealis` · `hologram` · `circuit` · `warp` · `equalizer` · `sakura` · `seishun` · `abyss` · `motion` · `contrib-grid` · `contrib-city` · `contrib-galaxy` · `contrib-heartbeat` · `all` | `banner` |
 | `--user` | `contrib-*` 스타일용 GitHub 사용자 이름 (`all`과 함께 쓰면 contrib 스타일도 생성) | — |
 | `--palette` | `green` · `halloween` · `ice` · `neon` (`contrib-*`) | `green` |
 | `--contrib-html` | 가져오는 대신 저장해 둔 contributions HTML 사용 | — |
 | `--name` | 큰 타이틀 | `Hi, I'm Jihoo` |
 | `--line` | 부제목 문구, 여러 번 지정 가능 (`banner`/`matrix`/`splitflap`은 모두 사용, 나머지는 첫 줄만 사용) | 예시 문구 3개 |
 | `--tag` | 태그, 여러 번 지정 가능 (`orbit`은 궤도로 돌리고 `splitflap`/`blueprint`/`terminal`/`hologram`/`circuit`/`warp`/`equalizer`는 글자로 표시) | Python, Nix, Linux, … |
-| `--theme` | `aurora` · `sunset` · `ocean` (`banner`, `orbit`, `splitflap`, `liquid`, `scope`, 그리고 `terminal`~`abyss`) | `aurora` |
+| `--theme` | `aurora` · `sunset` · `ocean` (`banner`, `orbit`, `splitflap`, `liquid`, `scope`, 그리고 `terminal`~`motion`) | `aurora` |
 | `--seed` | 별/코드 비 배치용 랜덤 시드 | `42` |
 | `--out` | 출력 경로 (스타일 하나일 때만) | `assets/<style>.svg` |
 

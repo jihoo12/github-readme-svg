@@ -20,6 +20,7 @@ from pathlib import Path
 import abyss
 import contrib
 import creative
+import motion
 import spectacle
 from common import MONO, SANS, THEMES, esc
 from common import stars as _stars
@@ -443,6 +444,7 @@ STYLES = {
     **creative.STYLES,
     **spectacle.STYLES,
     **abyss.STYLES,
+    **motion.STYLES,
 }
 
 

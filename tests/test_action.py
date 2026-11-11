@@ -41,7 +41,7 @@ class ActionTests(unittest.TestCase):
                                      CONTRIB_HTML="calendar.html", OUTPUT_DIR="generated")
             self.assertEqual(result.returncode, 0, result.stderr)
             files = json.loads((workspace / "outputs").read_text().split("=", 1)[1])
-            self.assertEqual(len(files), 22)
+            self.assertEqual(len(files), 23)
             for file in files:
                 self.assertEqual(ET.parse(file).getroot().tag, "{http://www.w3.org/2000/svg}svg")
 
